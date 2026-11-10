@@ -1,0 +1,79 @@
+% !TeX root = ../main.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   IMPOSTAZIONE TEMPLATE DOCUMENTO                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[english]{babel}        % Impostato su inglese
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}       % per le formule delle sezioni PCA, LogReg e SVM
+\usepackage{amssymb}       % \mathbb (es. \mathbb{R})
+\usepackage[a-1b]{pdfx}    % per archiviazione pdfA
+\usepackage[a4paper,margin=2cm,includeheadfoot,headheight=14pt,headsep=8pt,footskip=18pt]{geometry}
+\usepackage{graphicx}      % \includegraphics
+\usepackage{float}         % posizionamento [H]
+\usepackage{booktabs}      % \toprule, \midrule, \bottomrule
+\usepackage{tikz}          % schema della pipeline
+
+\usepackage{fancyhdr}      % impaginazione
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead{} % clear all header fields
+\fancyhead[R]{\small\nouppercase{\rightmark}}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[R]{\thepage}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\renewcommand{\headrulewidth}{0.1pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\usepackage[font={small,it},skip=4pt]{caption}
+
+\linespread{1.0}\selectfont
+\raggedbottom
+
+\makeatletter  % per fare in stile FANCY tutte le pagine
+\let\ps@plain=\ps@fancy
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Definitions
+\def\texttilde{{\raise.17ex\hbox{$\scriptstyle\sim$}}}
+
+% Paragraph Editor
+\usepackage[parfill]{parskip}
+\setlength{\parskip}{0.25em}
+\setlength{\parindent}{0pt}
+
+% Compact spacing around figures and tables.
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\floatsep}{6pt plus 2pt minus 2pt}
+\setlength{\intextsep}{6pt plus 2pt minus 2pt}
+\setlength{\tabcolsep}{4pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Per inserire reference a link esterni
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%includi stampe con print
+
+\usepackage{xcolor}
+\usepackage{listings}
+\lstdefinestyle{out}{
+    basicstyle=\ttfamily\small,
+    backgroundcolor=\color{gray!10},
+    frame=single,
+    framerule=0pt,
+    breaklines=true,
+    xleftmargin=5pt,
+    framexleftmargin=5pt
+}
+
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\itshape}{\thesubsubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{11pt plus 2pt minus 2pt}{5pt}
+\titlespacing*{\subsection}{0pt}{7pt plus 1pt minus 1pt}{3pt}
+\titlespacing*{\subsubsection}{0pt}{5pt plus 1pt minus 1pt}{2pt}
